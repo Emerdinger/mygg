@@ -1,0 +1,33 @@
+.inicio-bg {
+    background: url(../images/background-index.jpg) no-repeat center center/cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inicio-bg .search-bar input {
+    padding: 5px 15px;
+    border-radius: 8px;
+    outline: none;
+}
+
+.inicio-bg .search-bar .btn {
+    background: orange;
+    margin-left: 10px;
+    margin-top: 5px;
+    padding: 5px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.inicio-bg .search-bar .btn:hover {
+    background: darkgray;
+    color: #fff;
+}
+
+.search-bar .region {
+    text-align: center;
+    margin-top: 10px;
+}

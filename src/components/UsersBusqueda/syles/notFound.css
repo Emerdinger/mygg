@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css?family=Maven+Pro:400,900");
+#noUsuario {
+    position: relative;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.noUsuario {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    max-width: 920px;
+    width: 100%;
+    line-height: 1.4;
+    text-align: center;
+    -webkit-transform: translate(-50%, -50%);;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.noUsuario-lol{
+    position: absolute;
+    height: 100px;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+.noUsuario-lol h1{
+    font-family: 'Maven pro', sans-serif;
+    color: #ececec;
+    font-weight: 900;
+    font-size: 230px;
+    margin: 0px;
+    position: absolute;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.noUsuario h2{
+    font-family: 'Maven pro', sans-serif;
+    font-size: 46px;
+    color: #000;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 0px;
+}
+
+.noUsuario p {
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 16px;
+    color: #000;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+
+.noUsuario a {
+    font-family: 'Maven pro', sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: #9f8ad0;
+    display: inline-block;
+    padding: 16px 38px;
+    border: 2px solid transparent;
+    border-radius: 40px;
+    color: #fff;
+    font-weight: 400;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+}
+
+.noUsuario a:hover {
+    background-color: #fff;
+    border-color: #9f8ad0;
+    color: #9f8ad0;
+}
+
+@media only screen and (max-width: 480px) {
+    .noUsuario .noUsuario-Unab h1 {
+        font-size: 162px;
+    }
+    .noUsuario h2 {
+        font-size: 26px;
+    }
+}

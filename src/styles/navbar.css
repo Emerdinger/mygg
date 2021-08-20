@@ -1,0 +1,40 @@
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+li {
+    list-style: none;
+}
+
+.mygg-navbar {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: rgba(0,0,0,.9);
+    width: 100vw;
+    height: 60px;
+    z-index: 1000;
+}
+
+.mygg-navbar .mygg-nav-logo img {
+    width: 55px;
+    height: 55px;
+    margin-left: 30px;
+}
+
+.mygg-nav-list {
+    width: 100%;
+}
+
+.mygg-navbar .mygg-nav-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.mygg-navbar .mygg-nav-items li {
+    margin: 0 30px;
+}

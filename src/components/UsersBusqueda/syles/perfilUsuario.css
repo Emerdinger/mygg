@@ -1,0 +1,47 @@
+#perfilUsuario {
+    height: 380px;
+    background: darkgray;
+}
+
+.icono-datos {
+    display: flex;
+    padding: 100px 0 60px 60px;
+}
+
+.icono-datos img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+}
+
+.icono-datos .icono-datos-info {
+    margin-left: 10px;
+    color: #fff;
+}
+
+.icono-datos-info h2 {
+    color: #e3e3e3;
+}
+
+.flex-solo-button {
+    width: 160px;
+    height: 30px;
+    margin-right: 10px;
+    margin-top: 10px;
+    color: #fff;
+}
+
+.flex-solo-button.flex {
+    background: #736398;
+}
+
+.flex-solo-button.solo {
+    background: rgb(59,91,127);
+}
+
+.flex-solo-button-lp {
+    background: rgb(87,99,120);
+    width: 60px;
+    height: 30px;
+    color: #fff;
+}

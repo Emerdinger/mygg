@@ -1,0 +1,41 @@
+.porcentaje {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.porcentaje-ranked {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.porcentaje-ranked.mr {
+    margin-right: 30px;
+}
+
+.porcentaje-ranked h3 {
+    color: #646464;
+}
+
+.circulo-porcentaje {
+    margin-bottom: 15px;
+}
+
+.porcentaje-ranked svg {
+    width: 150px;
+    height: 150px;
+}
+
+.porcentaje-ranked .barra-texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.porcentaje-ranked .barra-texto p{
+    font-weight: bold;
+    font-size: 20px;
+}
