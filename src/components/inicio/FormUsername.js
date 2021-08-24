@@ -15,7 +15,7 @@ export const FormUsername = () => {
             return;
         }
 
-        window.location.assign(`/#/${document.querySelector("#region").value}/user/${username}`);
+        window.location.assign(`mygg/#/${document.querySelector("#region").value}/user/${username}`);
     }
 
     return (
