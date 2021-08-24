@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/mygg/static/css/main.f52d0963.chunk.css",
-    "main.js": "/mygg/static/js/main.d8035d8a.chunk.js",
-    "main.js.map": "/mygg/static/js/main.d8035d8a.chunk.js.map",
+    "main.js": "/mygg/static/js/main.c84e6577.chunk.js",
+    "main.js.map": "/mygg/static/js/main.c84e6577.chunk.js.map",
     "runtime-main.js": "/mygg/static/js/runtime-main.3617ec62.js",
     "runtime-main.js.map": "/mygg/static/js/runtime-main.3617ec62.js.map",
     "static/css/2.6c0f60ba.chunk.css": "/mygg/static/css/2.6c0f60ba.chunk.css",
@@ -29,6 +29,6 @@
     "static/css/2.6c0f60ba.chunk.css",
     "static/js/2.91721f77.chunk.js",
     "static/css/main.f52d0963.chunk.css",
-    "static/js/main.d8035d8a.chunk.js"
+    "static/js/main.c84e6577.chunk.js"
   ]
 }
