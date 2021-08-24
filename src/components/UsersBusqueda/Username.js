@@ -10,7 +10,7 @@ export const Username = () => {
 
     const {user, region} = useParams();
 
-    const url = `https://${region}.api.riotgames.com/lol/summoner/v4/summoners/by-name/${user}?api_key=RGAPI-840e1df5-faf3-4d81-8eea-6bf32b1f860b`
+    const url = `https://${region}.api.riotgames.com/lol/summoner/v4/summoners/by-name/${user}?api_key=${process.env.REACT_APP_API_RIOT_KEY}`
 
     useEffect(() => {
 
@@ -30,7 +30,7 @@ export const Username = () => {
             )
         } else {
             return (
-                <div>
+                <div className="user-perfil-gg">
                     <PerfilUsuario
                         personalData={data}
                     />

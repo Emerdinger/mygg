@@ -39,3 +39,21 @@
     font-weight: bold;
     font-size: 20px;
 }
+
+@media (max-width: 500px){
+    .porcentaje-ranked svg {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 400px){
+    .porcentaje-ranked svg {
+        width: 60px;
+        height: 60px;
+    }
+
+    .porcentaje-ranked .barra-texto p{
+        font-size: 10px;
+    }
+}

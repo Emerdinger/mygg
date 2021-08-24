@@ -1,19 +1,18 @@
 import React from "react";
 import {useFetch} from "../../hooks/useFetch";
 import {useParams} from "react-router-dom";
-import "./syles/perfilUsuario.css"
+import "./styles/perfilUsuario.css"
 import {useRango} from "../../hooks/useRango";
 
-export const PerfilUsuario = ({personalData}) => {
+export const PerfilUsuario = React.memo(({personalData}) => {
 
     const {region} = useParams();
 
     const {
         data: rango
-    } = useFetch(`https://${region}.api.riotgames.com/lol/league/v4/entries/by-summoner/${personalData.id}?api_key=RGAPI-840e1df5-faf3-4d81-8eea-6bf32b1f860b`)
+    } = useFetch(`https://${region}.api.riotgames.com/lol/league/v4/entries/by-summoner/${personalData.id}?api_key=${process.env.REACT_APP_API_RIOT_KEY}`)
 
     const {flex, solo} = useRango(rango);
-
 
     return (
         <div id="perfilUsuario">
@@ -35,4 +34,4 @@ export const PerfilUsuario = ({personalData}) => {
         </div>
 
     )
-}
+})

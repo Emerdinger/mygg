@@ -1,0 +1,24 @@
+.active-game {
+    margin-bottom: 20px;
+}
+
+.active-title {
+    text-align: center;
+    font-size: 10px;
+    color: #646464;
+    margin: 10px 0;
+}
+
+table {
+    width: 100%;
+    border: 1px solid #000;
+}
+th, td {
+    width: 25%;
+    text-align: left;
+    vertical-align: top;
+    padding: 0.3em;
+}
+caption {
+    padding: 0.3em;
+}

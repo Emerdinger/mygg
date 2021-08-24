@@ -1,7 +1,7 @@
 import React from "react";
 import {useParams} from "react-router-dom";
 import { HashRouter as Router, Link } from "react-router-dom"
-import "./syles/notFound.css"
+import "./styles/notFound.css"
 
 export const UserNotFound = () => {
 

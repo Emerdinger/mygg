@@ -1,7 +1,7 @@
 import React from "react";
 import {CircularProgressbarWithChildren} from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
-import "./syles/winrateBars.css"
+import "../styles/winrateBars.css"
 
 export const WinrateBars = ({flex, solo}) => {
 

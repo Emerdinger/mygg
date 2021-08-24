@@ -8,7 +8,7 @@ import {
 export const NavBar = () => {
     return (
         <Router>
-            <div className="mygg-navbar">
+            <div className="mygg-navbar hide">
                 <div className="mygg-nav-logo">
                     <Link to="/">
                         <img src={logo} alt="logo-mygg"/>
@@ -31,6 +31,20 @@ export const NavBar = () => {
                             <Link to="/">Servidor</Link>
                         </li>
                     </ul>
+                </div>
+            </div>
+            <div className="nav-bottom">
+                <div className="nav-b-item">
+                    <i className="fas fa-home fa-2x"></i>
+                </div>
+                <div className="nav-b-item">
+                    <i className="fas fa-list fa-2x"></i>
+                </div>
+                <div className="nav-b-item">
+                    <i className="fas fa-trophy-alt fa-2x"></i>
+                </div>
+                <div className="nav-b-item">
+                    <i className="fas fa-server fa-2x"></i>
                 </div>
             </div>
         </Router>

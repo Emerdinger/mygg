@@ -1,0 +1,199 @@
+.historial-title {
+    background-color: orange;
+    padding: 5px 0;
+}
+
+.historial-title p {
+    margin-left: 10px;
+}
+
+.historial-card {
+    background-color: #fdba49;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.rs-ckdaline {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.rs-ip {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.historial-card .card-body-cSmm {
+    display: flex;
+    padding: 10px 0;
+    padding-left: 10px;
+}
+
+.historial-card .card-body-cSmm .c-img{
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.historial-card .card-body-cSmm .body-smm{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.historial-card .card-body-cSmm .body-smm img{
+    width: 45px;
+    height: 45px;
+    border-radius: 5px;
+}
+
+.card-body-kda{
+    margin: 0 10px;
+}
+
+.card-body-kda .kda {
+    font-size: 20px;
+    font-weight: bold;
+    color: #3a3939;
+    text-align: center;
+}
+
+.card-body-kda .kda span{
+    color: #a92b2b;
+}
+
+.card-body-kda .kda-p {
+    font-size: 12px;
+    margin-top: 5px;
+    text-align: center;
+    color: #646464;
+    font-weight: bold;
+}
+
+.card-body-line {
+    margin: 0 10px;
+}
+
+.card-body-line p {
+    color: #646464;
+    margin-bottom: 3px;
+}
+
+.card-body-line .rol {
+    font-size: 18px;
+    font-weight: 500;
+    color: #000;
+}
+
+.card-body-items {
+    margin: 0 10px;
+    width: 180px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.card-body-items img {
+    width: 35px;
+    height: 35px;
+    margin-bottom: 3px;
+}
+
+.card-body-players{
+    display: flex;
+    flex-direction: row;
+}
+
+.player-team {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.player-team .player-img {
+    display: flex;
+    flex-direction: row;
+}
+
+.player-team .player-img img{
+    width: 15px;
+    height: 15px;
+}
+
+.player-team.m {
+    margin-right: 10px;
+}
+
+@media (max-width: 900px) {
+    .historial-card {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .rs-ckdaline {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .rs-ip {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-body-items {
+        margin-right: 100px;
+    }
+
+    .card-body-items img{
+        text-align: center;
+    }
+}
+
+@media (max-width: 575px) {
+    .rs-ip {
+        flex-direction: column;
+    }
+
+    .card-body-items {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 455px) {
+    .rs-ckdaline {
+        grid-template-columns: repeat(3,1fr);
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .historial-card .card-body-cSmm .c-img{
+        width: 60px;
+        height: 60px;
+    }
+
+    .historial-card .card-body-cSmm .body-smm img{
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media (max-width: 300px) {
+    .rs-ckdaline {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .card-body-players {
+        flex-direction: column;
+    }
+}

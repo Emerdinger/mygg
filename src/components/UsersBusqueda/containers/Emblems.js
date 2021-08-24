@@ -1,13 +1,13 @@
 import React from "react";
-import iron from "../../images/emblemas/Emblem_Iron.png";
-import bronze from "../../images/emblemas/Emblem_Bronze.png";
-import silver from "../../images/emblemas/Emblem_Silver.png";
-import gold from "../../images/emblemas/Emblem_Gold.png";
-import platinum from "../../images/emblemas/Emblem_Platinum.png";
-import diamond from "../../images/emblemas/Emblem_Diamond.png";
-import master from "../../images/emblemas/Emblem_Master.png";
-import grandMaster from "../../images/emblemas/Emblem_Grandmaster.png";
-import challenger from "../../images/emblemas/Emblem_Challenger.png";
+import iron from "../../../images/emblemas/Emblem_Iron.png";
+import bronze from "../../../images/emblemas/Emblem_Bronze.png";
+import silver from "../../../images/emblemas/Emblem_Silver.png";
+import gold from "../../../images/emblemas/Emblem_Gold.png";
+import platinum from "../../../images/emblemas/Emblem_Platinum.png";
+import diamond from "../../../images/emblemas/Emblem_Diamond.png";
+import master from "../../../images/emblemas/Emblem_Master.png";
+import grandMaster from "../../../images/emblemas/Emblem_Grandmaster.png";
+import challenger from "../../../images/emblemas/Emblem_Challenger.png";
 
 export const Emblems = ({tier}) => {
     if (tier === "IRON") {

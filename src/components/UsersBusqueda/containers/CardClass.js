@@ -1,16 +1,18 @@
 import React from "react";
-import "./syles/infoUsuario.css"
+import "../styles/infoUsuario.css"
 import {Emblems} from "./Emblems";
 
-export const CardClass = ({flex, solo}) => {
+export const CardClass = React.memo(({flex, solo}) => {
+
     return (
         <>
-            {
-                flex.tier ?
-                    <div className="card-class">
-                        <div className="card-title">
-                            <p>Estadísticas de flex</p>
-                        </div>
+
+            <div className="card-class">
+                <div className="card-title">
+                    <p>Estadísticas de flex</p>
+                </div>
+                {
+                    flex.tier ?
                         <div className="card-body">
                             <div className="card-body-image">
                                 <Emblems
@@ -22,9 +24,10 @@ export const CardClass = ({flex, solo}) => {
                                 <p>{flex.leaguePoints} lp</p>
                                 <p>{flex.wins} victorias - {flex.losses} derrotas</p>
                             </div>
-                        </div>
-                    </div> : <p style={{textAlign: "center"}}>Aún no tiene una clasificación</p>
-            }
+                        </div> : <p style={{textAlign: "center"}}>Aún no tiene una clasificación</p>
+                }
+            </div>
+
             <div className="card-class">
                 <div className="card-title">
                     <p>Estadísticas de SoloQ</p>
@@ -48,4 +51,4 @@ export const CardClass = ({flex, solo}) => {
 
         </>
     )
-}
+})

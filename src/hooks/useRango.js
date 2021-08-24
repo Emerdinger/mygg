@@ -1,6 +1,6 @@
-import {useState, useEffect} from "react";
+import {useEffect, useState} from "react";
 
-export const useRango = (rango) => {
+export const useRango = (rango = []) => {
 
     const [flex, setFlex] = useState({
         ranked: "Flex",
@@ -25,40 +25,44 @@ export const useRango = (rango) => {
     });
 
     useEffect(() => {
-        rango?.map((ran, i) => {
-            if (i === 0){
-                const winrate = Math.trunc(ran.wins / (ran.losses + ran.wins) * 100);
-                setFlex({
-                    ...flex,
-                    leagueId: ran.leagueId,
-                    leaguePoints: ran.leaguePoints,
-                    losses: ran.losses,
-                    wins: ran.wins,
-                    tier: ran.tier,
-                    rank: ran.rank,
-                    winrate
-                })
-            }else{
-                const winrate = Math.trunc(ran.wins / (ran.losses + ran.wins) * 100);
-                setSolo ({
-                    ...solo,
-                    leagueId: ran.leagueId,
-                    leaguePoints: ran.leaguePoints,
-                    losses: ran.losses,
-                    wins: ran.wins,
-                    tier: ran.tier,
-                    rank: ran.rank,
-                    winrate
-                });
-            }
 
-        })
+        if (rango != null) {
+
+            rango?.map(ran => {
+
+                if (ran.queueType === "RANKED_FLEX_SR"){
+                    const winrate = Math.trunc(ran.wins / (ran.losses + ran.wins) * 100);
+                    setFlex({
+                        ...flex,
+                        leagueId: ran.leagueId,
+                        leaguePoints: ran.leaguePoints,
+                        losses: ran.losses,
+                        wins: ran.wins,
+                        tier: ran.tier,
+                        rank: ran.rank,
+                        winrate
+                    })
+                }else{
+                    const winrate = Math.trunc(ran.wins / (ran.losses + ran.wins) * 100);
+                    setSolo ({
+                        ...solo,
+                        leagueId: ran.leagueId,
+                        leaguePoints: ran.leaguePoints,
+                        losses: ran.losses,
+                        wins: ran.wins,
+                        tier: ran.tier,
+                        rank: ran.rank,
+                        winrate
+                    });
+                }
+                return "";
+
+            })
+        }
     }, [rango])
 
-    const rangos = {
+    return {
         flex,
         solo
-    }
-
-    return rangos;
+    };
 }
