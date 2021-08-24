@@ -34,18 +34,18 @@ export const NavBar = () => {
                 </div>
             </div>
             <div className="nav-bottom">
-                <div className="nav-b-item">
+                <Link to="/" className="nav-b-item">
                     <i className="fas fa-home fa-2x"></i>
-                </div>
-                <div className="nav-b-item">
+                </Link>
+                <Link to="/" className="nav-b-item">
                     <i className="fas fa-list fa-2x"></i>
-                </div>
-                <div className="nav-b-item">
+                </Link>
+                <Link to="/" className="nav-b-item">
                     <i className="fas fa-trophy-alt fa-2x"></i>
-                </div>
-                <div className="nav-b-item">
+                </Link>
+                <Link to="/" className="nav-b-item">
                     <i className="fas fa-server fa-2x"></i>
-                </div>
+                </Link>
             </div>
         </Router>
     )

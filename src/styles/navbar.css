@@ -3,6 +3,10 @@ a {
     color: #fff;
 }
 
+nav-bottom a {
+    color: #000;
+}
+
 li {
     list-style: none;
 }
