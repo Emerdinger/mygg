@@ -2,8 +2,10 @@ import React, {useEffect, useState} from "react";
 import "../styles/historial.css"
 import {useFetch} from "../../../hooks/useFetch";
 import {HistorialParticipantes} from "./HistorialParticipantes";
+import {useRegion} from "../../../hooks/useRegion";
+import {useParams} from "react-router-dom";
 
-export const Historial = React.memo(({idGame, personalData}) => {
+export const Historial = React.memo(({idGame, personalData, reg}) => {
 
     const [player, setPlayer] = useState({
         championName: "",
@@ -20,10 +22,12 @@ export const Historial = React.memo(({idGame, personalData}) => {
         item5: "",
         item6: "",
         summoner1Id: "",
-        summoner2Id: ""
+        summoner2Id: "",
+        neutralMinionsKilled: "",
+        win: ""
     });
 
-    const {data} = useFetch(`https://americas.api.riotgames.com/lol/match/v5/matches/${idGame}?api_key=${process.env.REACT_APP_API_RIOT_KEY}`);
+    const {data} = useFetch(`https://${reg}.api.riotgames.com/lol/match/v5/matches/${idGame}?api_key=${process.env.REACT_APP_API_RIOT_KEY}`);
     const {data: summ} = useFetch("https://ddragon.leagueoflegends.com/cdn/11.16.1/data/es_MX/summoner.json");
     const {info} = !!data && data
     const {gameDuration, gameMode, participants} = !!info && info
@@ -50,7 +54,9 @@ export const Historial = React.memo(({idGame, personalData}) => {
                     item5: participant.item5,
                     item6: participant.item6,
                     summoner1Id: participant.summoner1Id,
-                    summoner2Id: participant.summoner2Id
+                    summoner2Id: participant.summoner2Id,
+                    neutralMinionsKilled: participant.neutralMinionsKilled,
+                    win: participant.win
                 });
             }
             return "";
@@ -73,7 +79,7 @@ export const Historial = React.memo(({idGame, personalData}) => {
     return (
         <>
             <div className="historial-title">
-                <p>{gameMode} {(gameDuration / 60000).toFixed()} Minutos</p>
+                <p>{gameMode} {(gameDuration / 60000).toFixed()} Minutos: { player.win ? <span>Victoria</span> : <span>Derrota</span>}</p>
             </div>
             <div className="historial-card">
                 <div className="rs-ckdaline">
@@ -88,12 +94,12 @@ export const Historial = React.memo(({idGame, personalData}) => {
                     </div>
                     <div className="card-body-kda">
                         <p className="kda">{player.kills} / <span>{player.deaths}</span> / {player.assists}</p>
-                        <p className="kda-p">2.11 KDA</p>
+                        <p className="kda-p">{(player.kills + player.assists) / player.deaths} KDA</p>
                     </div>
                     <div className="card-body-line">
                         <p className="rol">{player.lane}</p>
                         <p>lv {player.champLevel}</p>
-                        <p>250 cs</p>
+                        <p>{player.neutralMinionsKilled} cs</p>
                     </div>
                 </div>
                 <div className="rs-ip">

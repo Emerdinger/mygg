@@ -7,10 +7,13 @@ import {useRango} from "../../hooks/useRango";
 import {WinrateBars} from "./containers/WinrateBars";
 import {ActiveGame} from "./containers/ActiveGame";
 import {Historial} from "./containers/Historial";
+import {useRegion} from "../../hooks/useRegion";
 
 export const InfoUsuario = React.memo(({personalData}) => {
 
     const {region} = useParams();
+
+    const reg = useRegion(region);
 
     const {
         data: rango
@@ -18,7 +21,7 @@ export const InfoUsuario = React.memo(({personalData}) => {
 
     const {flex, solo} = useRango(rango);
 
-    const {data: idGame} =  useFetch(`https://americas.api.riotgames.com/lol/match/v5/matches/by-puuid/${personalData.puuid}/ids?start=0&count=10&api_key=${process.env.REACT_APP_API_RIOT_KEY}`);
+    const {data: idGame} =  useFetch(`https://${reg}.api.riotgames.com/lol/match/v5/matches/by-puuid/${personalData.puuid}/ids?start=0&count=10&api_key=${process.env.REACT_APP_API_RIOT_KEY}`);
 
     return (
         <div id="infoUsuario">
@@ -46,6 +49,7 @@ export const InfoUsuario = React.memo(({personalData}) => {
                                 <Historial
                                            personalData={personalData}
                                            idGame = {game}
+                                           reg={reg}
                                 />
                             </div>
                         )
